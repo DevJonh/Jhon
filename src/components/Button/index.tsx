@@ -1,9 +1,11 @@
 import * as Style from './styles'
 
-const Button = () => (
-  <Style.Wrapper>
-    <h1>Button</h1>
-  </Style.Wrapper>
+export type ButtonProps = {
+  label: string
+}
+
+const Button = ({ label }: ButtonProps) => (
+  <Style.Button>{label.toUpperCase()}</Style.Button>
 )
 
 export default Button
