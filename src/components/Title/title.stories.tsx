@@ -7,4 +7,6 @@ export default {
   component: Title
 } as Meta
 
-export const Basic: Story = (args) => <Title {...args} />
+export const Basic: Story = (args) => (
+  <Title title="Desenvolvedor Web | Frontend" {...args} />
+)

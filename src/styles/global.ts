@@ -9,6 +9,10 @@ const GlobalStyle = createGlobalStyle`
 
   body{
     background-color: #243036;
+
+    &.sb-show-main.sb-main-padded{
+      padding:0
+    }
   }
 
   html, body, #__next{
@@ -17,6 +21,17 @@ const GlobalStyle = createGlobalStyle`
 
   body{
     font-family: Roboto, sans-serif;
+  }
+
+  @media (max-width: 768px){
+    html{
+      font-size: 90%;
+    }
+  }
+  @media (max-width: 460px){
+    html{
+      font-size: 80%;
+    }
   }
 `
 export default GlobalStyle

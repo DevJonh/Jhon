@@ -1,20 +1,22 @@
 import styled from 'styled-components'
 
-export const ButtonContainer = styled.button`
-  transform: translate(-50%, -50%);
-`
-export const Button = styled.button`
+type ButtonProps = {
+  medium: boolean
+}
+
+export const Button = styled.button<ButtonProps>`
   background: #243036;
   box-shadow: inset 0px -4px 4px -2px rgba(0, 0, 0, 0.25);
   border-radius: 6px;
   border: 3px solid #4caf50;
 
-  height: 3.5rem;
-  width: 50%;
-  max-width: 13.4rem;
+  height: ${({ medium }) => (medium ? '2.7rem' : '3.5rem')};
+
+  width: ${({ medium }) => (medium ? '9.5rem' : '13.4rem')};
+  max-width: 100%;
   margin: 3.4rem auto;
 
-  font-size: 1rem;
+  font-size: ${({ medium }) => (medium ? '.9rem' : '1rem')};
   color: #4caf50;
   font-weight: bold;
   letter-spacing: 0.05rem;

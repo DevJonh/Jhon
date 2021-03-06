@@ -1,9 +1,36 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
+
+const slideIn = keyframes`
+  from{
+    display: none;
+    transform: translateX(1000px)
+  }
+  to{
+    display: flex;
+    transform: translateX(0)  
+  }
+`
+const slideOut = keyframes`
+  from{
+    transform: translateX(0)
+  }
+  to{
+    transform: translateX(1000px)
+  }
+`
+const pulse = keyframes`
+  0% {
+    opacity:0
+  }
+  100% {
+   opacity: 1
+  }
+`
 
 export const Wrapper = styled.header`
   position: absolute;
   top: 0;
-  background: url('/img/bg-header.png') no-repeat center;
+  background: url('/img/bg-header.png') no-repeat center -30px;
   color: #fff;
   width: 100%;
   height: 100%;
@@ -14,18 +41,45 @@ export const Wrapper = styled.header`
   flex-direction: column;
   align-items: center;
   justify-content: start;
+  @media (max-width: 768px) {
+    padding: 0 4%;
+  }
 `
 export const Logo = styled.img`
   max-width: 100%;
   width: 6rem;
+  margin-right: 3rem;
 `
 
 export const Nav = styled.nav`
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-top: 3.6rem;
   width: 100%;
+  svg {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    svg {
+      cursor: pointer;
+      transition: 0.3s;
+      animation: ${pulse} 1s linear;
+      display: block;
+
+      position: fixed;
+      right: 6%;
+
+      z-index: 6;
+      transition: 0.3s;
+
+      &:hover {
+        color: #4caf50;
+      }
+    }
+  }
 `
 
 export const Menu = styled.ul`
@@ -34,7 +88,7 @@ export const Menu = styled.ul`
   align-items: center;
   justify-content: space-between;
   list-style: none;
-  width: 50%;
+  width: 35rem;
 
   li a {
     text-decoration: none;
@@ -62,9 +116,46 @@ export const Menu = styled.ul`
       }
     }
   }
+
+  @media (max-width: 768px) {
+    position: fixed;
+    background-color: #243036;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+    &.isActive {
+      display: flex;
+      opacity: 1;
+      animation: ${slideIn} 0.3s linear;
+    }
+
+    &.isClosed {
+      animation: ${slideOut} 0.3s linear;
+      transform: translateX(1000px);
+    }
+
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: flex-end;
+    transform: translateX(0);
+    li {
+      margin-top: 5rem;
+      width: 90%;
+      text-align: center;
+      align-content: center;
+      border-bottom: 1px solid #758496;
+    }
+  }
 `
 export const TitleContainer = styled.div`
   margin-top: 18rem;
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 768px) {
+    margin-top: 12rem;
+  }
 `

@@ -1,10 +1,10 @@
 import { Meta, Story } from '@storybook/react/types-6-0'
 
-import Main from '.'
+import Header from '.'
 
 export default {
-  title: 'Main',
-  component: Main
+  title: 'Header',
+  component: Header
 } as Meta
 
-export const Basic: Story = (args) => <Main {...args} />
+export const Basic: Story = (args) => <Header {...args} />
