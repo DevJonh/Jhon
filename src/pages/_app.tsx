@@ -11,10 +11,15 @@ function App({ Component, pageProps }: AppProps) {
         <link rel="apple-touch-icon" href="/img/icon-512.png" />
         <meta
           name="description"
-          content="A simple project started to work with Typescript, React, NextJS and Styled Components"
+          content="Meu site pessoal para apresentar meu conhecimento, aprendizado e evolução."
         />
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#06092b" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Rozha+One&display=swap"
+          rel="stylesheet"
+        />
       </Head>
       <GlobalStyle />
       <Component {...pageProps} />
