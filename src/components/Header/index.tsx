@@ -1,6 +1,6 @@
 import Button from 'components/Button'
 import Title from 'components/Title'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 import { MdDehaze, MdClear } from 'react-icons/md'
 
@@ -43,7 +43,7 @@ const Header = () => {
       </Style.Nav>
       <Style.TitleContainer>
         <Title title="Desenvolvedor Web | Frontend" />
-        <Button label="ver projetos" />
+        <Button medium={false} label="ver projetos" />
       </Style.TitleContainer>
     </Style.Wrapper>
   )

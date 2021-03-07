@@ -1,9 +1,12 @@
 import * as Style from './styles'
 
 export type TitleProps = {
-  title?: string
+  title: string
+  left: boolean
 }
 
-const Title = ({ title }: TitleProps) => <Style.Title>{title}</Style.Title>
+const Title = ({ title, left }: TitleProps) => (
+  <Style.Title left={left}>{title}</Style.Title>
+)
 
 export default Title

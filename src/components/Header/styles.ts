@@ -28,15 +28,10 @@ const pulse = keyframes`
 `
 
 export const Wrapper = styled.header`
-  position: absolute;
-  top: 0;
-  background: url('/img/bg-header.png') no-repeat center -30px;
+  background: url('/img/bg-header.png') no-repeat center;
   color: #fff;
   width: 100%;
-  height: 100%;
-  max-height: 55rem;
   padding: 0 6rem;
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -151,7 +146,7 @@ export const Menu = styled.ul`
   }
 `
 export const TitleContainer = styled.div`
-  margin-top: 18rem;
+  margin-top: 14rem;
   display: flex;
   flex-direction: column;
 
