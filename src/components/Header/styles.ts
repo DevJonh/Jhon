@@ -7,7 +7,7 @@ const slideIn = keyframes`
   }
   to{
     display: flex;
-    transform: translateX(0)  
+    transform: translateX(0)
   }
 `
 const slideOut = keyframes`
@@ -29,15 +29,18 @@ const pulse = keyframes`
 
 export const Wrapper = styled.header`
   background: url('/img/bg-header.png') no-repeat center;
-  color: #fff;
+  mix-blend-mode: lighten;
+  color: #f5f5f5;
   width: 100%;
   padding: 0 6rem;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: start;
-  @media (max-width: 768px) {
+  @media (max-width: 800px) {
     padding: 0 4%;
+    height: 75%;
   }
 `
 export const Logo = styled.img`
@@ -57,15 +60,15 @@ export const Nav = styled.nav`
     display: none;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 800px) {
     svg {
       cursor: pointer;
       transition: 0.3s;
       animation: ${pulse} 1s linear;
       display: block;
 
-      position: fixed;
-      right: 6%;
+      position: absolute;
+      right: 0;
 
       z-index: 6;
       transition: 0.3s;
@@ -112,14 +115,15 @@ export const Menu = styled.ul`
     }
   }
 
-  @media (max-width: 768px) {
-    position: fixed;
+  @media (max-width: 800px) {
+    position: absolute;
     background-color: #243036;
     width: 100vw;
     height: 100vh;
-    top: 0;
+    top: 10px;
     bottom: 0;
-    left: 0;
+    left: -5%;
+    right: 6%;
     z-index: 5;
     &.isActive {
       display: flex;
@@ -133,11 +137,10 @@ export const Menu = styled.ul`
     }
 
     flex-direction: column-reverse;
-    align-items: center;
     justify-content: flex-end;
     transform: translateX(0);
     li {
-      margin-top: 5rem;
+      margin-top: 4rem;
       width: 90%;
       text-align: center;
       align-content: center;

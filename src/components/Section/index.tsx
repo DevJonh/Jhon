@@ -1,8 +1,9 @@
 import Title from 'components/Title'
+import { ReactElement } from 'react'
 import * as Style from './styles'
 
 type SectionProps = {
-  children: React.ReactNode
+  children: React.ReactNode | ReactElement
   id: string
   title: string
   left: boolean
@@ -11,7 +12,7 @@ type SectionProps = {
 const Section = ({ children, id, title, left }: SectionProps) => (
   <Style.Wrapper id={id}>
     <Title left={left} title={title.toUpperCase()} />
-    {children}
+    <Style.Content>{children}</Style.Content>
   </Style.Wrapper>
 )
 

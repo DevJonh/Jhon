@@ -3,14 +3,9 @@
   "short_name": "Dev Jhonny",
   "icons": [
     {
-      "src": "/img/icon-192.png",
+      "src": "/img/logo.png",
       "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "/img/icon-512.png",
-      "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "115x42"
     }
   ],
   "background_color": "#243036",

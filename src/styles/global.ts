@@ -23,12 +23,12 @@ const GlobalStyle = createGlobalStyle`
     font-family: Roboto, sans-serif;
   }
 
-  @media (max-width: 768px){
+  @media (max-width: 800px){
     html{
       font-size: 90%;
     }
   }
-  @media (max-width: 460px){
+  @media (max-width: 500px){
     html{
       font-size: 80%;
     }
