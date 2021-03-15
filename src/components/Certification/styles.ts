@@ -18,10 +18,10 @@ export const Wrapper = styled.div`
 `
 
 export const ContainerImage = styled.div`
-  height: 250px;
+  height: 300px;
   overflow: hidden;
   div {
-    height: 250px;
+    height: 300px;
   }
 
   filter: blur(2px);

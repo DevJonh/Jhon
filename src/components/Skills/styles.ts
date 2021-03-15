@@ -19,21 +19,29 @@ export const Wrapper = styled.div`
   }
 
   ul {
+    width: 100%;
     margin-top: 2.1rem;
     list-style: none;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 1rem;
+    column-gap: 1rem;
+    row-gap: 1.5rem;
     align-items: center;
     li {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
+      flex: 1;
+
+      img {
+        width: 2rem;
+      }
       p {
-        font-size: 1rem;
-        margin-top: 0.2rem;
-        color: #758496;
+        font-size: 0.8rem;
+        margin-top: 0.8rem;
+        color: #f5f5f5;
+        letter-spacing: 0.1rem;
       }
     }
   }

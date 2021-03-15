@@ -11,7 +11,8 @@
     "storybook": "start-storybook -s ./public -p 6006",
     "build-storybook": "build-storybook",
     "generate": "yarn plop --plopfile ./generators/plopfile.js",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "codegen": "graphql-codegen --config codegen.yml"
   },
   "lint-staged": {
     "src/**/*": [
@@ -19,8 +20,11 @@
     ]
   },
   "dependencies": {
+    "graphql": "^15.5.0",
+    "graphql-request": "^3.4.0",
     "next": "10.0.7",
     "next-pwa": "^5.0.5",
+    "nextjs-progressbar": "^0.0.8",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-icons": "^4.2.0",
@@ -32,6 +36,10 @@
   "devDependencies": {
     "@babel/core": "^7.13.8",
     "@babel/preset-typescript": "^7.13.0",
+    "@graphql-codegen/add": "^2.0.2",
+    "@graphql-codegen/cli": "1.21.2",
+    "@graphql-codegen/typescript": "^1.21.1",
+    "@graphql-codegen/typescript-operations": "^1.17.15",
     "@storybook/addon-essentials": "^6.1.20",
     "@storybook/react": "^6.1.20",
     "@testing-library/jest-dom": "^5.11.9",

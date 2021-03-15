@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const Wrapper = styled.div`
   width: 100%;
   flex: 1;
-  margin: 1.7rem auto;
+  margin: 3rem auto;
   h2 {
     margin-top: 0.5rem;
     font-size: 1.1rem;
@@ -26,6 +26,7 @@ export const Wrapper = styled.div`
   }
   img:nth-child(2) {
     top: 30px;
+    z-index: -2;
   }
 
   .container-history {

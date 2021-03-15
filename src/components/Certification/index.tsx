@@ -1,57 +1,66 @@
 /* eslint-disable prefer-const */
 import Image from 'next/image'
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import * as Style from './styles'
 
-const images = [
-  { id: 0, url: '/img/1687.jpg' },
-  { id: 1, url: '/img/1.jpg' },
-  { id: 2, url: '/img/1.jpg' },
-  { id: 3, url: '/img/1687.jpg' },
-  { id: 4, url: '/img/1687.jpg' },
-  { id: 5, url: '/img/1.jpg' },
-  { id: 6, url: '/img/1.jpg' }
-]
-
-interface ImageProps {
-  id: number
-  url: string
-}
 type FocusType = 'first' | 'center' | 'last'
 
-const Certification = () => {
+export type CertificateProps = {
+  count: number
+  certification: {
+    id: string
+    url: string
+  }
+}
+
+const Certification = (props: CertificateProps[]) => {
   const [isActive, setIsActive] = useState(0)
-  const [filteredImage, setFilteredImage] = useState<ImageProps[]>([])
+  const [filteredImage, setFilteredImage] = useState<CertificateProps[]>([])
   const [isFocus, setIsFocus] = useState<FocusType>('first')
 
+  const certificate = useMemo(() => {
+    return Object.values(props)
+  }, [props])
+
   useEffect(() => {
-    let img = images.filter((_, i) => {
+    let img = certificate.filter((cert, i) => {
       if (isActive - 1 === i || isActive === i || isActive + 1 === i) {
         setIsFocus('center')
-        return [images[isActive - 1], images[isActive], images[isActive + 1]]
+        return [
+          certificate[isActive - 1],
+          certificate[isActive],
+          certificate[isActive + 1]
+        ]
       }
     })
 
     if (img.length === 2) {
       setIsFocus('first')
-      img = [images[isActive], images[isActive + 1], images[isActive + 2]]
-    } else if (isActive === images.length - 2) {
-      img = [images[isActive - 2], images[isActive], images[isActive + 1]]
+      img = [
+        certificate[isActive],
+        certificate[isActive + 1],
+        certificate[isActive + 2]
+      ]
+    } else if (isActive === certificate.length - 2) {
+      img = [
+        certificate[isActive - 2],
+        certificate[isActive],
+        certificate[isActive + 1]
+      ]
     }
 
-    if (isActive === images.length - 1) setIsFocus('last')
+    if (isActive === certificate.length - 1) setIsFocus('last')
     if (isActive === 0) setIsFocus('first')
-    if (isActive !== images.length - 1) setFilteredImage(img)
-  }, [isActive])
+    if (isActive !== certificate.length - 1) setFilteredImage(img)
+  }, [isActive, certificate])
 
   const handleNextSlide = (id?: number): void => {
-    console.log(id)
     if (id || id === 0) {
-      if (id <= images.length) {
-        setIsActive(id)
+      if (id <= certificate.length) {
+        setIsActive(id - 1)
       }
     } else {
-      if (isActive + 1 <= images.length - 1) {
+      if (isActive + 1 <= certificate.length - 1) {
         setIsActive(isActive + 1)
       } else {
         return
@@ -64,7 +73,7 @@ const Certification = () => {
     }
   }
   const handleViewSlideCondition = (): void => {
-    if (isActive === images.length - 1) {
+    if (isActive === certificate.length - 1) {
       setIsActive(isActive - 1)
     } else if (isActive === 0) {
       setIsActive(isActive + 1)
@@ -76,11 +85,16 @@ const Certification = () => {
         {/*<img className="detail" src="img/detail.png" alt="detail" />*/}
         {filteredImage.map((img) => (
           <Style.ContainerImage
-            key={img.id}
-            className={isActive === img.id ? 'active' : ''}
-            onClick={() => handleNextSlide(img.id)}
+            key={img.certification.id}
+            className={isActive + 1 === img.count ? 'active' : ''}
+            onClick={() => handleNextSlide(img.count)}
           >
-            <Image src={img.url} alt="" width={350} height={250} />
+            <Image
+              src={img.certification.url}
+              alt=""
+              width={350}
+              height={250}
+            />
           </Style.ContainerImage>
         ))}
       </Style.Wrapper>
