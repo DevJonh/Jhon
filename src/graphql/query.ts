@@ -33,3 +33,36 @@ export const GET_CERTIFICATES = gql`
     }
   }
 `
+export const GET_PROJECTS = gql`
+  query GetProjects($first: Int) {
+    projects(first: $first) {
+      id
+      image {
+        url
+      }
+      name
+      minDescription
+      slug
+    }
+  }
+`
+export const GET_PROJECT_BY_SLUG = gql`
+  query GetProjectBySlug($slug: String!) {
+    projects(where: { slug: $slug }) {
+      id
+      image {
+        url
+        height
+        width
+      }
+      name
+      minDescription
+      description
+      github
+      storybook
+      web
+      tecnology
+      slug
+    }
+  }
+`

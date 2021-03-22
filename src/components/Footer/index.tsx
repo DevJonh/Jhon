@@ -3,10 +3,15 @@ import { FaPaintBrush } from 'react-icons/fa'
 import React from 'react'
 import * as Style from './styles'
 
-const Footer: React.FC = ({ children }) => (
-  <Style.Wrapper id="contact">
+type FooterProps = {
+  children: React.ReactNode
+  inverter: boolean
+}
+
+const Footer = ({ children, inverter }: FooterProps) => (
+  <Style.Wrapper inverter={inverter} id="contact">
     <div>{children}</div>
-    <Style.Copy>
+    <Style.Copy inverter={inverter}>
       <p>
         Designer{' '}
         <a target="_blank" href="">

@@ -14,7 +14,7 @@ export const Wrapper = styled.div`
 export const BoxProjects = styled.div`
   text-align: left;
   background-color: #243036;
-  padding: 2rem 1.3rem;
+  padding: 1.5rem 1rem;
   border-radius: 0.3rem;
 
   display: flex;
@@ -24,6 +24,7 @@ export const BoxProjects = styled.div`
   img {
     background-color: #888;
     border-radius: 0.2rem;
+    width: 100%;
   }
   div:nth-child(2) {
     background-color: rgba(0, 0, 0, 0.25);

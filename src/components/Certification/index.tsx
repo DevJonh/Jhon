@@ -1,17 +1,10 @@
 /* eslint-disable prefer-const */
 import Image from 'next/image'
 import { useEffect, useMemo, useState } from 'react'
+import { CertificateProps } from 'types/api'
 import * as Style from './styles'
 
 type FocusType = 'first' | 'center' | 'last'
-
-export type CertificateProps = {
-  count: number
-  certification: {
-    id: string
-    url: string
-  }
-}
 
 const Certification = (props: CertificateProps[]) => {
   const [isActive, setIsActive] = useState(0)
@@ -94,6 +87,7 @@ const Certification = (props: CertificateProps[]) => {
               alt=""
               width={350}
               height={250}
+              loading="lazy"
             />
           </Style.ContainerImage>
         ))}

@@ -2394,12 +2394,11 @@ export type Project = Node & {
   publishedAt?: Maybe<Scalars['DateTime']>;
   name: Scalars['String'];
   minDescription: Scalars['String'];
-  description: RichText;
   tecnology: Scalars['String'];
-  github: Scalars['String'];
-  storybook: Scalars['String'];
-  web: Scalars['String'];
   image: Asset;
+  github?: Maybe<Scalars['String']>;
+  description: Scalars['String'];
+  slug: Scalars['String'];
   /** List of Project versions */
   history: Array<Version>;
 };
@@ -2445,12 +2444,11 @@ export type ProjectCreateInput = {
   updatedAt?: Maybe<Scalars['DateTime']>;
   name: Scalars['String'];
   minDescription: Scalars['String'];
-  description: Scalars['RichTextAST'];
   tecnology: Scalars['String'];
-  github: Scalars['String'];
-  storybook: Scalars['String'];
-  web: Scalars['String'];
   image: AssetCreateOneInlineInput;
+  github?: Maybe<Scalars['String']>;
+  description: Scalars['String'];
+  slug: Scalars['String'];
 };
 
 export type ProjectCreateManyInlineInput = {
@@ -2607,6 +2605,7 @@ export type ProjectManyWhereInput = {
   tecnology_ends_with?: Maybe<Scalars['String']>;
   /** All values not ending with the given string */
   tecnology_not_ends_with?: Maybe<Scalars['String']>;
+  image?: Maybe<AssetWhereInput>;
   github?: Maybe<Scalars['String']>;
   /** All values that are not equal to given value. */
   github_not?: Maybe<Scalars['String']>;
@@ -2626,45 +2625,44 @@ export type ProjectManyWhereInput = {
   github_ends_with?: Maybe<Scalars['String']>;
   /** All values not ending with the given string */
   github_not_ends_with?: Maybe<Scalars['String']>;
-  storybook?: Maybe<Scalars['String']>;
+  description?: Maybe<Scalars['String']>;
   /** All values that are not equal to given value. */
-  storybook_not?: Maybe<Scalars['String']>;
+  description_not?: Maybe<Scalars['String']>;
   /** All values that are contained in given list. */
-  storybook_in?: Maybe<Array<Scalars['String']>>;
+  description_in?: Maybe<Array<Scalars['String']>>;
   /** All values that are not contained in given list. */
-  storybook_not_in?: Maybe<Array<Scalars['String']>>;
+  description_not_in?: Maybe<Array<Scalars['String']>>;
   /** All values containing the given string. */
-  storybook_contains?: Maybe<Scalars['String']>;
+  description_contains?: Maybe<Scalars['String']>;
   /** All values not containing the given string. */
-  storybook_not_contains?: Maybe<Scalars['String']>;
+  description_not_contains?: Maybe<Scalars['String']>;
   /** All values starting with the given string. */
-  storybook_starts_with?: Maybe<Scalars['String']>;
+  description_starts_with?: Maybe<Scalars['String']>;
   /** All values not starting with the given string. */
-  storybook_not_starts_with?: Maybe<Scalars['String']>;
+  description_not_starts_with?: Maybe<Scalars['String']>;
   /** All values ending with the given string. */
-  storybook_ends_with?: Maybe<Scalars['String']>;
+  description_ends_with?: Maybe<Scalars['String']>;
   /** All values not ending with the given string */
-  storybook_not_ends_with?: Maybe<Scalars['String']>;
-  web?: Maybe<Scalars['String']>;
+  description_not_ends_with?: Maybe<Scalars['String']>;
+  slug?: Maybe<Scalars['String']>;
   /** All values that are not equal to given value. */
-  web_not?: Maybe<Scalars['String']>;
+  slug_not?: Maybe<Scalars['String']>;
   /** All values that are contained in given list. */
-  web_in?: Maybe<Array<Scalars['String']>>;
+  slug_in?: Maybe<Array<Scalars['String']>>;
   /** All values that are not contained in given list. */
-  web_not_in?: Maybe<Array<Scalars['String']>>;
+  slug_not_in?: Maybe<Array<Scalars['String']>>;
   /** All values containing the given string. */
-  web_contains?: Maybe<Scalars['String']>;
+  slug_contains?: Maybe<Scalars['String']>;
   /** All values not containing the given string. */
-  web_not_contains?: Maybe<Scalars['String']>;
+  slug_not_contains?: Maybe<Scalars['String']>;
   /** All values starting with the given string. */
-  web_starts_with?: Maybe<Scalars['String']>;
+  slug_starts_with?: Maybe<Scalars['String']>;
   /** All values not starting with the given string. */
-  web_not_starts_with?: Maybe<Scalars['String']>;
+  slug_not_starts_with?: Maybe<Scalars['String']>;
   /** All values ending with the given string. */
-  web_ends_with?: Maybe<Scalars['String']>;
+  slug_ends_with?: Maybe<Scalars['String']>;
   /** All values not ending with the given string */
-  web_not_ends_with?: Maybe<Scalars['String']>;
-  image?: Maybe<AssetWhereInput>;
+  slug_not_ends_with?: Maybe<Scalars['String']>;
 };
 
 export enum ProjectOrderByInput {
@@ -2684,21 +2682,20 @@ export enum ProjectOrderByInput {
   TecnologyDesc = 'tecnology_DESC',
   GithubAsc = 'github_ASC',
   GithubDesc = 'github_DESC',
-  StorybookAsc = 'storybook_ASC',
-  StorybookDesc = 'storybook_DESC',
-  WebAsc = 'web_ASC',
-  WebDesc = 'web_DESC'
+  DescriptionAsc = 'description_ASC',
+  DescriptionDesc = 'description_DESC',
+  SlugAsc = 'slug_ASC',
+  SlugDesc = 'slug_DESC'
 }
 
 export type ProjectUpdateInput = {
   name?: Maybe<Scalars['String']>;
   minDescription?: Maybe<Scalars['String']>;
-  description?: Maybe<Scalars['RichTextAST']>;
   tecnology?: Maybe<Scalars['String']>;
-  github?: Maybe<Scalars['String']>;
-  storybook?: Maybe<Scalars['String']>;
-  web?: Maybe<Scalars['String']>;
   image?: Maybe<AssetUpdateOneInlineInput>;
+  github?: Maybe<Scalars['String']>;
+  description?: Maybe<Scalars['String']>;
+  slug?: Maybe<Scalars['String']>;
 };
 
 export type ProjectUpdateManyInlineInput = {
@@ -2721,8 +2718,8 @@ export type ProjectUpdateManyInlineInput = {
 export type ProjectUpdateManyInput = {
   name?: Maybe<Scalars['String']>;
   minDescription?: Maybe<Scalars['String']>;
-  description?: Maybe<Scalars['RichTextAST']>;
   tecnology?: Maybe<Scalars['String']>;
+  description?: Maybe<Scalars['String']>;
 };
 
 export type ProjectUpdateManyWithNestedWhereInput = {
@@ -2899,6 +2896,7 @@ export type ProjectWhereInput = {
   tecnology_ends_with?: Maybe<Scalars['String']>;
   /** All values not ending with the given string */
   tecnology_not_ends_with?: Maybe<Scalars['String']>;
+  image?: Maybe<AssetWhereInput>;
   github?: Maybe<Scalars['String']>;
   /** All values that are not equal to given value. */
   github_not?: Maybe<Scalars['String']>;
@@ -2918,53 +2916,51 @@ export type ProjectWhereInput = {
   github_ends_with?: Maybe<Scalars['String']>;
   /** All values not ending with the given string */
   github_not_ends_with?: Maybe<Scalars['String']>;
-  storybook?: Maybe<Scalars['String']>;
+  description?: Maybe<Scalars['String']>;
   /** All values that are not equal to given value. */
-  storybook_not?: Maybe<Scalars['String']>;
+  description_not?: Maybe<Scalars['String']>;
   /** All values that are contained in given list. */
-  storybook_in?: Maybe<Array<Scalars['String']>>;
+  description_in?: Maybe<Array<Scalars['String']>>;
   /** All values that are not contained in given list. */
-  storybook_not_in?: Maybe<Array<Scalars['String']>>;
+  description_not_in?: Maybe<Array<Scalars['String']>>;
   /** All values containing the given string. */
-  storybook_contains?: Maybe<Scalars['String']>;
+  description_contains?: Maybe<Scalars['String']>;
   /** All values not containing the given string. */
-  storybook_not_contains?: Maybe<Scalars['String']>;
+  description_not_contains?: Maybe<Scalars['String']>;
   /** All values starting with the given string. */
-  storybook_starts_with?: Maybe<Scalars['String']>;
+  description_starts_with?: Maybe<Scalars['String']>;
   /** All values not starting with the given string. */
-  storybook_not_starts_with?: Maybe<Scalars['String']>;
+  description_not_starts_with?: Maybe<Scalars['String']>;
   /** All values ending with the given string. */
-  storybook_ends_with?: Maybe<Scalars['String']>;
+  description_ends_with?: Maybe<Scalars['String']>;
   /** All values not ending with the given string */
-  storybook_not_ends_with?: Maybe<Scalars['String']>;
-  web?: Maybe<Scalars['String']>;
+  description_not_ends_with?: Maybe<Scalars['String']>;
+  slug?: Maybe<Scalars['String']>;
   /** All values that are not equal to given value. */
-  web_not?: Maybe<Scalars['String']>;
+  slug_not?: Maybe<Scalars['String']>;
   /** All values that are contained in given list. */
-  web_in?: Maybe<Array<Scalars['String']>>;
+  slug_in?: Maybe<Array<Scalars['String']>>;
   /** All values that are not contained in given list. */
-  web_not_in?: Maybe<Array<Scalars['String']>>;
+  slug_not_in?: Maybe<Array<Scalars['String']>>;
   /** All values containing the given string. */
-  web_contains?: Maybe<Scalars['String']>;
+  slug_contains?: Maybe<Scalars['String']>;
   /** All values not containing the given string. */
-  web_not_contains?: Maybe<Scalars['String']>;
+  slug_not_contains?: Maybe<Scalars['String']>;
   /** All values starting with the given string. */
-  web_starts_with?: Maybe<Scalars['String']>;
+  slug_starts_with?: Maybe<Scalars['String']>;
   /** All values not starting with the given string. */
-  web_not_starts_with?: Maybe<Scalars['String']>;
+  slug_not_starts_with?: Maybe<Scalars['String']>;
   /** All values ending with the given string. */
-  web_ends_with?: Maybe<Scalars['String']>;
+  slug_ends_with?: Maybe<Scalars['String']>;
   /** All values not ending with the given string */
-  web_not_ends_with?: Maybe<Scalars['String']>;
-  image?: Maybe<AssetWhereInput>;
+  slug_not_ends_with?: Maybe<Scalars['String']>;
 };
 
 /** References Project record uniquely */
 export type ProjectWhereUniqueInput = {
   id?: Maybe<Scalars['ID']>;
   github?: Maybe<Scalars['String']>;
-  storybook?: Maybe<Scalars['String']>;
-  web?: Maybe<Scalars['String']>;
+  slug?: Maybe<Scalars['String']>;
 };
 
 export type PublishLocaleInput = {
@@ -3772,6 +3768,40 @@ export type GetCertificateQuery = (
     & { certification: (
       { __typename?: 'Asset' }
       & Pick<Asset, 'url' | 'id'>
+    ) }
+  )> }
+);
+
+export type GetProjectsQueryVariables = Exact<{
+  first?: Maybe<Scalars['Int']>;
+}>;
+
+
+export type GetProjectsQuery = (
+  { __typename?: 'Query' }
+  & { projects: Array<(
+    { __typename?: 'Project' }
+    & Pick<Project, 'id' | 'name' | 'minDescription' | 'slug'>
+    & { image: (
+      { __typename?: 'Asset' }
+      & Pick<Asset, 'url'>
+    ) }
+  )> }
+);
+
+export type GetProjectBySlugQueryVariables = Exact<{
+  slug: Scalars['String'];
+}>;
+
+
+export type GetProjectBySlugQuery = (
+  { __typename?: 'Query' }
+  & { projects: Array<(
+    { __typename?: 'Project' }
+    & Pick<Project, 'id' | 'name' | 'minDescription' | 'description' | 'github' | 'tecnology' | 'slug'>
+    & { image: (
+      { __typename?: 'Asset' }
+      & Pick<Asset, 'url'>
     ) }
   )> }
 );

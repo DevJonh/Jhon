@@ -18,10 +18,12 @@ export const Wrapper = styled.div`
 `
 
 export const ContainerImage = styled.div`
-  height: 300px;
+  width: 100%;
+  height: 17.5rem;
   overflow: hidden;
   div {
-    height: 300px;
+    width: 100%;
+    height: 17.5rem;
   }
 
   filter: blur(2px);
@@ -87,12 +89,10 @@ export const ContainerImage = styled.div`
     margin-left: -4%;
     margin-right: -6%;
     width: 100%;
-    height: 100%;
-
-    //margin: 0 4.5rem;
-
+    height: 110%; //margin: 0 4.5rem;
     div {
       position: relative;
+      height: 110%;
     }
 
     &.active {

@@ -1,13 +1,6 @@
 import { useMemo } from 'react'
+import { FormationProps } from 'types/api'
 import * as Style from './styles'
-
-export type FormationProps = {
-  id: string
-  period: string
-  formationType: string
-  course: string
-  college: string
-}
 
 const Formation = (props: FormationProps[]) => {
   const formations = useMemo(() => {

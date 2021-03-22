@@ -1,29 +1,35 @@
 import {
   GetAbilitiesQuery,
   GetCertificateQuery,
-  GetFormationQuery
+  GetFormationQuery,
+  GetProjectsQuery
 } from 'graphql/generated/graphql'
-import { GET_ABILITIES, GET_CERTIFICATES, GET_FORMATIONS } from 'graphql/query'
+import {
+  GET_ABILITIES,
+  GET_CERTIFICATES,
+  GET_FORMATIONS,
+  GET_PROJECTS
+} from 'graphql/query'
 import client from 'graphql/client'
 import { GetStaticProps } from 'next'
+import { HomeProps } from 'types/api'
 
 import Header from 'components/Header'
 import Section from 'components/Section'
 import About from 'components/About'
-import Skills, { SkillsProps } from 'components/Skills'
-import Formation, { FormationProps } from 'components/Formation'
-import Certification, { CertificateProps } from 'components/Certification'
 import Projects from 'components/Projects'
 import Footer from 'components/Footer'
 import Contato from 'components/Contato'
+import Skills from 'components/Skills'
+import Formation from 'components/Formation'
+import Certification from 'components/Certification'
 
-type HomeProps = {
-  technicalAbilitie: SkillsProps[]
-  formations: FormationProps[]
-  certifications: CertificateProps[]
-}
-
-const Home = ({ certifications, formations, technicalAbilitie }: HomeProps) => {
+const Home = ({
+  certifications,
+  formations,
+  technicalAbilitie,
+  projects
+}: HomeProps) => {
   return (
     <>
       <Header />
@@ -37,9 +43,9 @@ const Home = ({ certifications, formations, technicalAbilitie }: HomeProps) => {
         <Certification {...certifications} />
       </Section>
       <Section title="Projetos" left id="projects">
-        <Projects />
+        <Projects {...projects} />
       </Section>
-      <Footer>
+      <Footer inverter={false}>
         <Contato />
       </Footer>
     </>
@@ -56,13 +62,24 @@ export const getStaticProps: GetStaticProps = async () => {
   const { certifications } = await client.request<GetCertificateQuery>(
     GET_CERTIFICATES
   )
+  const { projects } = await client.request<GetProjectsQuery>(GET_PROJECTS)
+
+  if (!projects || !certifications || !technicalAbilitie || !formations) {
+    return {
+      redirect: {
+        destination: 'notFound',
+        permanent: false
+      }
+    }
+  }
 
   return {
-    revalidate: 5,
+    revalidate: 60,
     props: {
-      technicalAbilitie,
-      formations,
-      certifications
+      technicalAbilitie: { ...technicalAbilitie },
+      formations: { ...formations },
+      certifications: { ...certifications },
+      projects: { ...projects }
     }
   }
 }

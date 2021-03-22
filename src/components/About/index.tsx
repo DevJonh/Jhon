@@ -13,8 +13,8 @@ const About = () => (
     <Heading title="JONATAS SENNA" slogan="Desenvolvedor web | frontend" />
 
     <p className="description">
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel corrupti
-      labore eaque deleniti voluptatem harum id natus et animi aperiam expedita,
+      Ipsum dolor sit amet consectetur adipisicing elit. Vel corrupti labore
+      eaque deleniti voluptatem harum id natus et animi aperiam expedita,
       possimus, fugit architecto exercitationem ex est cupiditate quod suscipit.
     </p>
   </Style.Wrapper>

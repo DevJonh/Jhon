@@ -30,7 +30,7 @@ const GlobalStyle = createGlobalStyle`
   }
   @media (max-width: 500px){
     html{
-      font-size: 80%;
+      font-size: 87%;
     }
   }
 `

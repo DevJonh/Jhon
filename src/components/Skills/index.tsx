@@ -2,14 +2,7 @@ import Image from 'next/image'
 import Heading from 'components/Heading'
 import * as Style from './styles'
 import { useMemo } from 'react'
-
-export interface SkillsProps {
-  id: string
-  name: string
-  icon: {
-    url: string
-  }
-}
+import { SkillsProps } from 'types/api'
 
 function Skills(props: SkillsProps[]) {
   const skills = useMemo(() => {

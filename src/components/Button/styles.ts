@@ -5,6 +5,10 @@ type ButtonProps = {
 }
 
 export const Button = styled.button<ButtonProps>`
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: #243036;
   box-shadow: inset 0px -4px 4px -2px rgba(0, 0, 0, 0.25);
   border-radius: ${({ medium }) => (medium ? '4px' : '6px')};
