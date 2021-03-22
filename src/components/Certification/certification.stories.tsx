@@ -1,5 +1,6 @@
-import { Meta, Story } from '@storybook/react/types-6-0'
+import { Meta } from '@storybook/react/types-6-0'
 import Section from 'components/Section'
+import { CertificateProps } from 'types/api'
 
 import Certification from '.'
 
@@ -8,7 +9,7 @@ export default {
   component: Certification
 } as Meta
 
-export const Basic: Story = (args) => (
+export const Basic = (args: CertificateProps[]) => (
   <Section left id="certificado" title="CERTIFICADOS">
     <Certification {...args} />
   </Section>
