@@ -9,7 +9,7 @@ export default {
 } as Meta
 
 export const Basic: Story = (args) => (
-  <Footer {...args}>
+  <Footer inverter={false} {...args}>
     <Contato />
   </Footer>
 )
