@@ -7,7 +7,7 @@ import {
 import { GET_PROJECTS, GET_PROJECT_BY_SLUG } from 'graphql/query'
 import { GetStaticProps } from 'next'
 import ProjectTemplate from 'template/ProjectTemplate'
-import { ProjectsBySlug } from 'types/api'
+import { ProjectsBySlug, ProjectsProps } from 'types/api'
 
 const Project = (props: ProjectsBySlug) => {
   return <ProjectTemplate {...props} />
@@ -20,7 +20,7 @@ export async function getStaticPaths() {
     qtd: 9
   })
 
-  const paths = projects.map(({ slug }) => ({
+  const paths = projects.map(({ slug }: ProjectsProps) => ({
     params: { slug }
   }))
 
@@ -39,7 +39,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   )
 
   let newProduct = {}
-  projects.forEach((item) => {
+  projects.forEach((item: ProjectsProps) => {
     newProduct = { ...item }
   })
 

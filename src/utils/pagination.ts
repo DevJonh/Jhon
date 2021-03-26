@@ -1,4 +1,4 @@
-import { ProjectsProps } from 'components/Projects'
+import { ProjectsProps } from 'types/api'
 
 export const pagination = (
   items: ProjectsProps[],

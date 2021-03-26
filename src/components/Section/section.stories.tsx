@@ -1,7 +1,4 @@
-import { Meta, Story } from '@storybook/react/types-6-0'
-import About from 'components/About'
-import Formation from 'components/Formation'
-import Skills from 'components/Skills'
+import { Meta, Story } from '@storybook/react'
 
 import Section from '.'
 
@@ -12,8 +9,6 @@ export default {
 
 export const Basic: Story = (args) => (
   <Section title="Sobre" left id="sobre" {...args}>
-    <About />
-    <Skills />
-    <Formation />
+    <h2>Olá</h2>
   </Section>
 )

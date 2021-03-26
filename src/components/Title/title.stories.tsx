@@ -1,5 +1,4 @@
-import { Meta, Story } from '@storybook/react/types-6-0'
-
+import { Meta, Story } from '@storybook/react'
 import Title from '.'
 
 export default {
@@ -8,5 +7,5 @@ export default {
 } as Meta
 
 export const Basic: Story = (args) => (
-  <Title title="Desenvolvedor Web | Frontend" {...args} />
+  <Title left={false} title="Desenvolvedor Web | Frontend" {...args} />
 )

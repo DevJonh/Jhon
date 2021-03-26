@@ -1,4 +1,5 @@
-import { Meta, Story } from '@storybook/react/types-6-0'
+import { Meta } from '@storybook/react'
+import { ProjectsProps } from 'types/api'
 
 import Projects from '.'
 
@@ -7,4 +8,4 @@ export default {
   component: Projects
 } as Meta
 
-export const Basic: Story = (args) => <Projects {...args} />
+export const Basic = (args: ProjectsProps[]) => <Projects {...args} />

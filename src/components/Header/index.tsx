@@ -42,7 +42,7 @@ const Header = () => {
         </Style.Menu>
       </Style.Nav>
       <Style.TitleContainer>
-        <Title title="Desenvolvedor Web | Frontend" />
+        <Title left={false} title="Desenvolvedor Web | Frontend" />
         <Button medium={false} label="ver projetos" />
       </Style.TitleContainer>
     </Style.Wrapper>
