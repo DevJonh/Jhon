@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Wrapper = styled.section`
-  overflow: hidden;
+  //overflow: hidden;
   position: relative;
   max-width: 100%;
   margin-top: 3.5rem;
@@ -27,6 +27,12 @@ export const Wrapper = styled.section`
   @media (max-width: 500px) {
     padding: 1.5rem 1.5rem;
     justify-content: center;
+  }
+
+  @media (max-width: 411px) {
+    padding: 0rem 1rem;
+    flex-direction: column;
+    align-items: flex-start;
   }
 `
 export const Content = styled.section`

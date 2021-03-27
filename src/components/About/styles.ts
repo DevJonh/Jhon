@@ -52,4 +52,13 @@ export const Wrapper = styled.div`
       max-width: 100%;
     }
   }
+
+  @media (max-width: 500px) {
+    width: 95%;
+    margin: 0 auto 2.5rem 0;
+    p {
+      max-width: 90%;
+      margin-left: 0;
+    }
+  }
 `

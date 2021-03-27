@@ -86,8 +86,6 @@ export const ContainerImage = styled.div`
   }
 
   @media (max-width: 500px) {
-    margin-left: -4%;
-    margin-right: -6%;
     width: 100%;
     height: 110%; //margin: 0 4.5rem;
     div {
@@ -96,11 +94,26 @@ export const ContainerImage = styled.div`
     }
 
     &.active {
-      margin-left: -1.4rem;
+      margin-left: 0rem;
       &:hover {
         transform: translateX(0px);
         cursor: pointer;
       }
+    }
+  }
+
+  @media (max-width: 375px) {
+    width: 100%;
+    img {
+      width: 100%;
+      margin: 0 auto;
+    }
+    div {
+      width: 100%;
+    }
+
+    &.active {
+      margin-left: 0rem;
     }
   }
 `
@@ -144,6 +157,13 @@ export const SlideStyle = styled.div`
 
   @media (max-width: 500px) {
     width: 25%;
-    margin: 2rem 12rem;
+    &.focus::after {
+      margin: 2rem 12rem;
+    }
+  }
+  @media (max-width: 375px) {
+    &.focus::after {
+      margin: 2rem 4rem;
+    }
   }
 `

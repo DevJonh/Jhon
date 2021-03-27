@@ -8,15 +8,26 @@ type FocusType = 'first' | 'center' | 'last'
 
 const Certification = (props: CertificateProps[]) => {
   const [isActive, setIsActive] = useState(0)
-  const [filteredImage, setFilteredImage] = useState<CertificateProps[]>([])
+  const [filteredImage, setFilteredImage] = useState<
+    CertificateProps[] | CertificateProps
+  >([])
   const [isFocus, setIsFocus] = useState<FocusType>('first')
+  const [width, setWidth] = useState(false)
 
   const certificate = useMemo(() => {
     return Object.values(props)
   }, [props])
 
   useEffect(() => {
-    let img = certificate.filter((cert, i) => {
+    if (window.innerWidth <= 500) {
+      setWidth(true)
+    } else {
+      setWidth(false)
+    }
+  }, [])
+
+  useEffect(() => {
+    let img = certificate.filter((_, i) => {
       if (isActive - 1 === i || isActive === i || isActive + 1 === i) {
         setIsFocus('center')
         return [
@@ -26,6 +37,13 @@ const Certification = (props: CertificateProps[]) => {
         ]
       }
     })
+
+    if (width) {
+      setFilteredImage(
+        certificate[certificate.length - certificate.length + isActive]
+      )
+      return
+    }
 
     if (img.length === 2) {
       setIsFocus('first')
@@ -45,7 +63,7 @@ const Certification = (props: CertificateProps[]) => {
     if (isActive === certificate.length - 1) setIsFocus('last')
     if (isActive === 0) setIsFocus('first')
     if (isActive !== certificate.length - 1) setFilteredImage(img)
-  }, [isActive, certificate])
+  }, [isActive, certificate, width])
 
   const handleNextSlide = (id?: number): void => {
     if (id || id === 0) {
@@ -56,6 +74,7 @@ const Certification = (props: CertificateProps[]) => {
       if (isActive + 1 <= certificate.length - 1) {
         setIsActive(isActive + 1)
       } else {
+        setIsFocus('last')
         return
       }
     }
@@ -63,6 +82,8 @@ const Certification = (props: CertificateProps[]) => {
   const handlePreviousSlide = (): void => {
     if (isActive - 1 >= 0) {
       setIsActive(isActive - 1)
+    } else {
+      setIsFocus('first')
     }
   }
   const handleViewSlideCondition = (): void => {
@@ -76,20 +97,34 @@ const Certification = (props: CertificateProps[]) => {
     <>
       <Style.Wrapper>
         {/*<img className="detail" src="img/detail.png" alt="detail" />*/}
-        {filteredImage.map((img) => (
+        {Array.isArray(filteredImage) ? (
+          filteredImage.map((img) => (
+            <Style.ContainerImage
+              key={img.certification.id}
+              className={isActive + 1 === img.count ? 'active' : ''}
+              onClick={() => handleNextSlide(img.count)}
+            >
+              <Image
+                src={img.certification.url}
+                alt=""
+                width={350}
+                height={250}
+              />
+            </Style.ContainerImage>
+          ))
+        ) : (
           <Style.ContainerImage
-            key={img.certification.id}
-            className={isActive + 1 === img.count ? 'active' : ''}
-            onClick={() => handleNextSlide(img.count)}
+            key={filteredImage.certification.id}
+            className="active"
           >
             <Image
-              src={img.certification.url}
+              src={filteredImage.certification.url}
               alt=""
               width={350}
               height={250}
             />
           </Style.ContainerImage>
-        ))}
+        )}
       </Style.Wrapper>
       <Style.SlideStyle>
         <button

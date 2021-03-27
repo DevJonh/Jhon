@@ -51,6 +51,11 @@ export const BoxProjects = styled.div`
     width: 75%;
     margin: 0 3.6rem;
   }
+
+  @media (max-width: 500px) {
+    width: 80%;
+    margin: 0 2.2rem;
+  }
 `
 
 export const ContainerProjects = styled.div`

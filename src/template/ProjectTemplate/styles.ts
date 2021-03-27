@@ -41,6 +41,23 @@ export const HeaderStyles = styled.header`
       left: 2rem;
     }
   }
+
+  @media (max-width: 411px) {
+    padding: 2rem 2rem;
+    height: 15%;
+    .bg {
+      display: none;
+    }
+    img.logo {
+      width: 5.5rem;
+    }
+    div {
+      width: 5.5rem;
+    }
+    a {
+      left: 2rem;
+    }
+  }
 `
 export const ContainerImage = styled.div`
   width: 100%;
@@ -113,6 +130,9 @@ export const Tecnology = styled.div`
   @media (max-width: 500px) {
     grid-template-columns: repeat(3, 1fr);
   }
+  @media (max-width: 280px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 `
 
 export const Descricao = styled.section`
@@ -151,6 +171,7 @@ export const Descricao = styled.section`
 
   div.flex {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     width: 60%;
     margin: 0 auto;
@@ -190,6 +211,51 @@ export const Descricao = styled.section`
   }
   @media (max-width: 500px) {
     padding: 0 0rem;
+    width: 100%;
+
+    div.flex {
+      width: 100%;
+      justify-content: space-between;
+      a {
+        & + a {
+          margin-left: 0rem;
+        }
+      }
+      margin-bottom: 2rem;
+    }
+
+    div > img {
+      margin-bottom: 1.5rem;
+      & + img {
+        margin-left: 0rem;
+      }
+    }
+
+    pre {
+      margin: 1rem -5px;
+      width: 100%;
+      code {
+        display: block;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 0.2rem;
+        padding: 0.8rem 0.2rem;
+        font-size: 0.65rem;
+      }
+    }
+  }
+
+  @media (max-width: 280px) {
+    pre {
+      margin: 1rem -5px;
+      width: 100%;
+      code {
+        display: block;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 0.2rem;
+        padding: 0.8rem 0.2rem;
+        font-size: 0.5rem;
+      }
+    }
   }
 `
 

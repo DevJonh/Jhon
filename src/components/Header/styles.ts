@@ -29,7 +29,6 @@ const pulse = keyframes`
 
 export const Wrapper = styled.header`
   background: url('/img/bg-header.png') no-repeat center;
-  mix-blend-mode: lighten;
   color: #f5f5f5;
   width: 100%;
   padding: 0 6rem;
@@ -41,6 +40,9 @@ export const Wrapper = styled.header`
   @media (max-width: 800px) {
     padding: 0 4%;
     height: 75%;
+  }
+  @media (max-width: 375px) {
+    height: 65%;
   }
 `
 export const Logo = styled.img`

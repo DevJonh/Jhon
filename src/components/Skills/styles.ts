@@ -61,4 +61,13 @@ export const Wrapper = styled.div`
       grid-template-columns: repeat(4, 1fr);
     }
   }
+
+  @media (max-width: 375px) {
+    ul {
+      grid-template-columns: repeat(3, 1fr);
+      row-gap: 2rem;
+      margin-top: 2rem;
+      margin-left: -1rem;
+    }
+  }
 `
