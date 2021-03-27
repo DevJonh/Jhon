@@ -14,7 +14,11 @@ const Footer = ({ children, inverter }: FooterProps) => (
     <Style.Copy inverter={inverter}>
       <p>
         Designer{' '}
-        <a target="_blank" href="">
+        <a
+          target="_blank"
+          href="https://dribbble.com/giseleoliveira"
+          rel="noreferrer"
+        >
           Gisele Oliveira
         </a>{' '}
         <FaPaintBrush />

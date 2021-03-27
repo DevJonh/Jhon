@@ -87,7 +87,6 @@ const Certification = (props: CertificateProps[]) => {
               alt=""
               width={350}
               height={250}
-              loading="lazy"
             />
           </Style.ContainerImage>
         ))}

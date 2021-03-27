@@ -10,12 +10,14 @@ export type ButtonProps = {
 const Button = ({ label, medium, href }: ButtonProps) => {
   return href ? (
     <Link href={href} passHref>
-      <Style.Button as={'a'} medium={medium}>
+      <Style.Button rel="noreferrer" as={'a'} medium={medium}>
         {label.toUpperCase()}
       </Style.Button>
     </Link>
   ) : (
-    <Style.Button medium={medium}>{label.toUpperCase()}</Style.Button>
+    <Style.Button aria-label={label} medium={medium}>
+      {label.toUpperCase()}
+    </Style.Button>
   )
 }
 export default Button

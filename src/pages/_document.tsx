@@ -35,7 +35,7 @@ export default class MyDocument extends Document {
   }
   render() {
     return (
-      <Html>
+      <Html lang="pt-bt">
         <Head />
         <body>
           <Main />

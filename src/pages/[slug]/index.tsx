@@ -20,13 +20,11 @@ export async function getStaticPaths() {
     qtd: 9
   })
 
-  const paths = projects.map(({ slug }: ProjectsProps) => ({
-    params: { slug }
-  }))
+  const paths = projects.map(({ slug }) => ({ params: { slug } }))
 
   return {
     paths,
-    fallback: true
+    fallback: false
   }
 }
 
@@ -39,7 +37,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   )
 
   let newProduct = {}
-  projects.forEach((item: ProjectsProps) => {
+  projects.forEach((item) => {
     newProduct = { ...item }
   })
 

@@ -69,6 +69,7 @@ export const Nav = styled.nav`
 
       position: absolute;
       right: 0;
+      top: 1.8rem;
 
       z-index: 6;
       transition: 0.3s;
@@ -140,7 +141,7 @@ export const Menu = styled.ul`
     justify-content: flex-end;
     transform: translateX(0);
     li {
-      margin-top: 4rem;
+      margin-top: 2.5rem;
       width: 90%;
       text-align: center;
       align-content: center;

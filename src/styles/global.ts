@@ -15,6 +15,10 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
+  html{
+    scroll-behavior: smooth;
+  }
+
   html, body, #__next{
     height: 100%;
   }

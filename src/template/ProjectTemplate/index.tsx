@@ -72,21 +72,21 @@ const ProjectTemplate = ({ projects }: ProjectsBySlug) => {
         <Styles.Publishers>
           {projects.storybook && (
             <Link href={projects.storybook}>
-              <a target="_blank" className="storybook">
+              <a rel="noreferrer" target="_blank" className="storybook">
                 <img src="/img/storybook.svg" />
               </a>
             </Link>
           )}
           {projects.github && (
             <Link href={projects.github}>
-              <a target="_blank" className="github">
+              <a rel="noreferrer" target="_blank" className="github">
                 <FaGithub size={'50%'} color="#f5f5f5" />
               </a>
             </Link>
           )}
           {projects.web && (
             <Link href={projects.web}>
-              <a target="_blank" className="web">
+              <a rel="noreferrer" target="_blank" className="web">
                 <FaGlobe size={'50%'} color="#f5f5f5" />
               </a>
             </Link>

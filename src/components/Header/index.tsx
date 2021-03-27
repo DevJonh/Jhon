@@ -43,7 +43,7 @@ const Header = () => {
       </Style.Nav>
       <Style.TitleContainer>
         <Title left={false} title="Desenvolvedor Web | Frontend" />
-        <Button medium={false} label="ver projetos" />
+        <Button medium={false} href="/#projects" label="ver projetos" />
       </Style.TitleContainer>
     </Style.Wrapper>
   )

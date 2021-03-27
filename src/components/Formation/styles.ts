@@ -99,6 +99,10 @@ export const Wrapper = styled.div`
   }
 
   @media (max-width: 500px) {
+    img {
+      width: 100%;
+    }
+
     .history + .history {
       margin-top: 2.5rem;
     }

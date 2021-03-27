@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const Wrapper = styled.div`
+  position: relative;
   color: #f5f5f5;
   background-color: #0b325a;
   display: flex;
@@ -103,5 +104,39 @@ export const Midias = styled.a`
     p {
       color: #4caf50;
     }
+  }
+`
+
+export const Top = styled.a`
+  position: absolute;
+  width: 2.6rem;
+  height: 2.6rem;
+  box-shadow: 0px 2px 12px -5px rgba(0, 0, 0, 1);
+  border-radius: 50%;
+  background-color: #4bae50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 38%;
+  right: -16%;
+  cursor: pointer;
+  transition: 0.6s;
+  svg {
+    transition: 0.3s;
+  }
+
+  &:hover {
+    background-color: #409444;
+    svg {
+      transform: translateY(-4px);
+    }
+  }
+
+  @media (max-width: 800px) {
+    bottom: -18%;
+    right: -6%;
+  }
+  @media (max-width: 500px) {
+    right: -2%;
   }
 `
