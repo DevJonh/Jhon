@@ -15,6 +15,7 @@ const Header = () => {
         <Style.Logo
           src="/img/logo.png"
           alt="Nome JHON estilizado com um triângulo"
+          loading="lazy"
         />
 
         {!isActive ? (
