@@ -11,10 +11,12 @@ const Header = () => {
 
   return (
     <Style.Wrapper>
+      <img className="bg" src="/img/bg-header.png" alt="" />
       <Style.Nav className={isActive ? 'isActive' : ''}>
         <Style.Logo
           src="/img/logo.png"
           alt="Nome JHON estilizado com um triângulo"
+          loading="lazy"
         />
 
         {!isActive ? (

@@ -9,6 +9,7 @@ const About = () => (
       alt="Foto de Jhon author e criador deste site."
       width={150}
       height={150}
+      loading="lazy"
     />
     <Heading title="JONATAS SENNA" slogan="Desenvolvedor web | frontend" />
 

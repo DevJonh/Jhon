@@ -59,6 +59,7 @@ export const Wrapper = styled.div`
   @media (max-width: 500px) {
     ul {
       grid-template-columns: repeat(4, 1fr);
+      column-gap: 0.6rem;
     }
   }
 
@@ -66,6 +67,7 @@ export const Wrapper = styled.div`
     ul {
       grid-template-columns: repeat(3, 1fr);
       row-gap: 2rem;
+      column-gap: 1.2rem;
       margin-top: 2rem;
       margin-left: -1rem;
     }

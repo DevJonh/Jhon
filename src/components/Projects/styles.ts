@@ -34,11 +34,14 @@ export const BoxProjects = styled.div`
     padding: 1rem;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
 
     p {
       max-width: 100%;
       margin-top: 0.6rem;
       line-height: 1.6rem;
+      height: 4rem;
     }
   }
   @media (max-width: 800px) {

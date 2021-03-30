@@ -9,7 +9,7 @@ function App({ Component, pageProps }: AppProps) {
       <Head>
         <title>Jônatas Senna - Development web</title>
         <link rel="shortcut icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/img/icon-512.png" />
+        <link rel="apple-touch-icon" href="/favicon.ico" />
         <meta
           name="description"
           content="Meu site pessoal para apresentar meu conhecimento, aprendizado e evolução."

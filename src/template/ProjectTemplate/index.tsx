@@ -73,7 +73,7 @@ const ProjectTemplate = ({ projects }: ProjectsBySlug) => {
           {projects.storybook && (
             <Link href={projects.storybook}>
               <a rel="noreferrer" target="_blank" className="storybook">
-                <img src="/img/storybook.svg" />
+                <img src="/img/storybook.svg" loading="lazy" />
               </a>
             </Link>
           )}

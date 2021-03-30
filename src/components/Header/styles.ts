@@ -28,7 +28,7 @@ const pulse = keyframes`
 `
 
 export const Wrapper = styled.header`
-  background: url('/img/bg-header.png') no-repeat center;
+  position: relative;
   color: #f5f5f5;
   width: 100%;
   padding: 0 6rem;
@@ -37,17 +37,24 @@ export const Wrapper = styled.header`
   flex-direction: column;
   align-items: center;
   justify-content: start;
+
+  img.bg {
+    position: absolute;
+    top: -1.5rem;
+    mix-blend-mode: lighten;
+  }
   @media (max-width: 800px) {
     padding: 0 4%;
     height: 75%;
   }
   @media (max-width: 375px) {
-    height: 65%;
+    height: 68%;
   }
 `
 export const Logo = styled.img`
   max-width: 100%;
-  width: 6rem;
+  width: 96px;
+  height: 35px;
   margin-right: 3rem;
 `
 
@@ -71,7 +78,7 @@ export const Nav = styled.nav`
 
       position: absolute;
       right: 0;
-      top: 1.8rem;
+      top: 3rem;
 
       z-index: 6;
       transition: 0.3s;

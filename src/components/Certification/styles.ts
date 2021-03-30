@@ -87,10 +87,8 @@ export const ContainerImage = styled.div`
 
   @media (max-width: 500px) {
     width: 100%;
-    height: 110%; //margin: 0 4.5rem;
     div {
       position: relative;
-      height: 110%;
     }
 
     &.active {

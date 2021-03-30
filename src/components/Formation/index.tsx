@@ -8,8 +8,8 @@ const Formation = (props: FormationProps[]) => {
   }, [props])
   return (
     <Style.Wrapper>
-      <img src="/img/bg-formation.png" alt="details" />
-      <img src="/img/bg-formation-top.png" alt="details" />
+      <img src="/img/bg-formation.png" alt="details" loading="lazy" />
+      <img src="/img/bg-formation-top.png" alt="details" loading="lazy" />
       <h2>FORMAÇÕES</h2>
       <div className="container-history">
         {formations.map((formation) => (
