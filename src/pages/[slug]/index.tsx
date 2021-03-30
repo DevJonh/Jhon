@@ -7,7 +7,7 @@ import {
 import { GET_PROJECTS, GET_PROJECT_BY_SLUG } from 'graphql/query'
 import { GetStaticProps } from 'next'
 import ProjectTemplate from 'template/ProjectTemplate'
-import { ProjectsBySlug, ProjectsProps } from 'types/api'
+import { ProjectsBySlug } from 'types/api'
 
 const Project = (props: ProjectsBySlug) => {
   return <ProjectTemplate {...props} />
