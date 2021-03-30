@@ -27,9 +27,6 @@ const GlobalStyle = createGlobalStyle`
     font-family: Roboto, sans-serif;
   }
 
-  img{
-    width: 100%;
-  }
 
   @media (max-width: 800px){
     html{

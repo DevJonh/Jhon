@@ -130,7 +130,7 @@ export const Menu = styled.ul`
     background-color: #243036;
     width: 100vw;
     height: 100vh;
-    top: 10px;
+    top: 0px;
     bottom: 0;
     left: -5%;
     right: 6%;
@@ -150,7 +150,7 @@ export const Menu = styled.ul`
     justify-content: flex-end;
     transform: translateX(0);
     li {
-      margin-top: 2.5rem;
+      margin-top: 3.5rem;
       width: 90%;
       text-align: center;
       align-content: center;
