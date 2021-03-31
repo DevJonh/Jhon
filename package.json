@@ -31,7 +31,7 @@
     "react-icons": "^4.2.0",
     "sb": "^6.2.1",
     "sharp": "^0.28.0",
-    "styled-components": "^5.2.1",
+    "styled-components": "^5.2.3",
     "webpack": "5.28.0"
   },
   "devDependencies": {
