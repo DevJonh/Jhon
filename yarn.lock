@@ -2300,6 +2300,12 @@
     ts-dedent "^2.0.0"
     util-deprecate "^1.0.2"
 
+
+"@storybook/cli@6.2.2":
+  version "6.2.2"
+  resolved "https://registry.yarnpkg.com/@storybook/cli/-/cli-6.2.2.tgz#ee01f5ea1a0a5c11648856b585b9ad5f9257491e"
+  integrity sha512-qRq8ACYJiLUM4ZkfGEK2M0U/7VMvERvCU2YZZ3R6qibB41ffozizBefkpzGLWjilBFbxpJU1FabtM13igEOzoQ==
+
 "@storybook/channels@6.2.2":
   version "6.2.2"
   resolved "https://registry.yarnpkg.com/@storybook/channels/-/channels-6.2.2.tgz#502d1fc083559f8ed39f499557523178572798c2"
@@ -2309,15 +2315,12 @@
     ts-dedent "^2.0.0"
     util-deprecate "^1.0.2"
 
-"@storybook/cli@6.2.1":
-  version "6.2.1"
-  resolved "https://registry.yarnpkg.com/@storybook/cli/-/cli-6.2.1.tgz#a1455322d3041f3e605de40596e07e937f6d5639"
-  integrity sha512-0CIw0pFC1b81hUr6wP/oC74Sy6aoq0A6kO7Kf2S0DqD0+tquZQmWvmekV/vtETS6W8Iz42rfp1O5KTuNvpEFuA==
+
   dependencies:
     "@babel/core" "^7.12.10"
     "@babel/preset-env" "^7.12.11"
-    "@storybook/codemod" "6.2.1"
-    "@storybook/node-logger" "6.2.1"
+    "@storybook/codemod" "6.2.2"
+    "@storybook/node-logger" "6.2.2"
     "@storybook/semver" "^7.3.2"
     chalk "^4.1.0"
     commander "^6.2.1"
@@ -2396,6 +2399,12 @@
     core-js "^3.8.2"
     global "^4.4.0"
 
+
+"@storybook/codemod@6.2.2":
+  version "6.2.2"
+  resolved "https://registry.yarnpkg.com/@storybook/codemod/-/codemod-6.2.2.tgz#75427e89b632e654848f0b81db6f007357a2f6ce"
+  integrity sha512-k4OGB+in1981MWWpBu+E9biXQB3knNeNTWyILKEbQVqqvVXPYjbdoe0j8UwcWAQYuPFlZGAgNJsduOSMgkGv7w==
+
 "@storybook/client-logger@6.2.2":
   version "6.2.2"
   resolved "https://registry.yarnpkg.com/@storybook/client-logger/-/client-logger-6.2.2.tgz#953cc977dd428e484db7e1f09f46505fa6567155"
@@ -2404,14 +2413,11 @@
     core-js "^3.8.2"
     global "^4.4.0"
 
-"@storybook/codemod@6.2.1":
-  version "6.2.1"
-  resolved "https://registry.yarnpkg.com/@storybook/codemod/-/codemod-6.2.1.tgz#a39184d19f791b3ba30290c722319ffd6e84e11c"
-  integrity sha512-eQb12ewoqqXAmueydme7yfH0ZNg4oa1i4PtvWYK5xTXOexsrAgtijYc1hVUAdwKOM988X6DPg4uBE7GXDeesNw==
+
   dependencies:
     "@mdx-js/mdx" "^1.6.22"
     "@storybook/csf" "0.0.1"
-    "@storybook/node-logger" "6.2.1"
+    "@storybook/node-logger" "6.2.2"
     core-js "^3.8.2"
     cross-spawn "^7.0.3"
     globby "^11.0.2"
@@ -12174,12 +12180,12 @@ sane@^4.0.3:
     minimist "^1.1.1"
     walker "~1.0.5"
 
-sb@^6.2.1:
-  version "6.2.1"
-  resolved "https://registry.yarnpkg.com/sb/-/sb-6.2.1.tgz#8c660cd1306bc16da0894c2b07dabe712dd5ceb9"
-  integrity sha512-lCPCzYw+N2XrmnedeBlZQ3IaXHrYNKTx4YWxi6Da0uWofVWaw07D/Nd/BdV6uxRFPeEZA0Jr3cC0SPqn9m6TEw==
+sb@^6.2.2:
+  version "6.2.2"
+  resolved "https://registry.yarnpkg.com/sb/-/sb-6.2.2.tgz#382b2f77c8841c50c0f1608b1f86383874fc6983"
+  integrity sha512-DAayLk4HLbQr8+FeC8FWxB7UBafO8u8PJqBlVU4CJY5wzANsNbXPNrIXH63bFb/GpfiulhaVqzZ0RQ31nuGSOA==
   dependencies:
-    "@storybook/cli" "6.2.1"
+    "@storybook/cli" "6.2.2"
 
 scheduler@^0.20.2:
   version "0.20.2"
