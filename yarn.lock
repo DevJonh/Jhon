@@ -1728,20 +1728,20 @@
     call-me-maybe "^1.0.1"
     glob-to-regexp "^0.3.0"
 
-"@next/env@10.1.2":
-  version "10.1.2"
-  resolved "https://registry.yarnpkg.com/@next/env/-/env-10.1.2.tgz#04888eb7115a5b0633dc59e321e5c952917a39d5"
-  integrity sha512-G6kEq7dr7f+unVTUL74lIaB6njB73vEMVi7AhujaNnNZr6z8jQ43jCjNyawQsNyoNWsRo/9x6x9W72PbrGmy/w==
+"@next/env@10.1.3":
+  version "10.1.3"
+  resolved "https://registry.yarnpkg.com/@next/env/-/env-10.1.3.tgz#29e5d62919b4a7b1859f8d36169848dc3f5ddebe"
+  integrity sha512-q7z7NvmRs66lCQmVJtKjDxVtMTjSwP6ExVzaH46pbTH60MHgzEJ9H4jXrFLTihPmCIvpAv6Ai04jbS8dcg1ZMQ==
 
-"@next/polyfill-module@10.1.2":
-  version "10.1.2"
-  resolved "https://registry.yarnpkg.com/@next/polyfill-module/-/polyfill-module-10.1.2.tgz#0cad99af18da0f90a63a25b60602ab46650017e6"
-  integrity sha512-9+xXb33HIPCrV0yM79blqwgLa+fkvm0gYs/wUDI0pPBCHkMpCZA/SWUeF/yKDY6qWO79H3B5pWTziLmzycQPWA==
+"@next/polyfill-module@10.1.3":
+  version "10.1.3"
+  resolved "https://registry.yarnpkg.com/@next/polyfill-module/-/polyfill-module-10.1.3.tgz#beafe89bc4235d436fa0ed02c9d2a5d311fb0238"
+  integrity sha512-1DtUVcuoBJAn5IrxIZQjUG1KTPkiXMYloykPSkRxawimgvG9dRj2kscU+4KGNSFxHoxW9c68VRCb+7MDz5aGGw==
 
-"@next/react-dev-overlay@10.1.2":
-  version "10.1.2"
-  resolved "https://registry.yarnpkg.com/@next/react-dev-overlay/-/react-dev-overlay-10.1.2.tgz#e98edfdc7fbed4d0cb333594469c7fa62f96e6df"
-  integrity sha512-B81nhgkWr+MbDAXN9I38WIdhAKayfIzrnOXXF2MS4VgxyHBvYQQfmobNNE0XBByyDn0+Ww5s9xg3L6Shh9kWKA==
+"@next/react-dev-overlay@10.1.3":
+  version "10.1.3"
+  resolved "https://registry.yarnpkg.com/@next/react-dev-overlay/-/react-dev-overlay-10.1.3.tgz#ee1c6033b29be9b383e061bd9705021d131ea445"
+  integrity sha512-vIgUah3bR9+MKzwU1Ni5ONfYM0VdI42i7jZ+Ei1c0wjwkG9anVnDqhSQ3mVg62GP2nt7ExaaFyf9THbsw5KYXg==
   dependencies:
     "@babel/code-frame" "7.12.11"
     anser "1.4.9"
@@ -1755,10 +1755,10 @@
     stacktrace-parser "0.1.10"
     strip-ansi "6.0.0"
 
-"@next/react-refresh-utils@10.1.2":
-  version "10.1.2"
-  resolved "https://registry.yarnpkg.com/@next/react-refresh-utils/-/react-refresh-utils-10.1.2.tgz#1c60150bb3f004fb9dd02db387a952483e6e2e4c"
-  integrity sha512-SQvtCt6nNOkGKddidQehxtJKMkoapg/kbLy/HwrqU8WdVrVVAk8JQw/QjDHVEsdezRxspeNKbho4L+3jl4c9rw==
+"@next/react-refresh-utils@10.1.3":
+  version "10.1.3"
+  resolved "https://registry.yarnpkg.com/@next/react-refresh-utils/-/react-refresh-utils-10.1.3.tgz#65b3e1b9846c02452787fde1d54ad9c54b506dbd"
+  integrity sha512-P4GJZuLKfD/o42JvGZ/xP4Hxg68vd3NeZxOLqIuQKFjjaYgC2IrO+lE5PTwGmRkytjfprJC+9j7Jss/xQAS6QA==
 
 "@nodelib/fs.scandir@2.1.4":
   version "2.1.4"
@@ -2291,6 +2291,12 @@
     qs "^6.10.0"
     telejson "^5.1.0"
 
+
+"@storybook/cli@6.2.2":
+  version "6.2.2"
+  resolved "https://registry.yarnpkg.com/@storybook/cli/-/cli-6.2.2.tgz#ee01f5ea1a0a5c11648856b585b9ad5f9257491e"
+  integrity sha512-qRq8ACYJiLUM4ZkfGEK2M0U/7VMvERvCU2YZZ3R6qibB41ffozizBefkpzGLWjilBFbxpJU1FabtM13igEOzoQ==
+
 "@storybook/channels@6.2.2":
   version "6.2.2"
   resolved "https://registry.yarnpkg.com/@storybook/channels/-/channels-6.2.2.tgz#502d1fc083559f8ed39f499557523178572798c2"
@@ -2299,6 +2305,7 @@
     core-js "^3.8.2"
     ts-dedent "^2.0.0"
     util-deprecate "^1.0.2"
+
 
 "@storybook/channels@6.2.3":
   version "6.2.3"
@@ -2313,11 +2320,12 @@
   version "6.2.1"
   resolved "https://registry.yarnpkg.com/@storybook/cli/-/cli-6.2.1.tgz#a1455322d3041f3e605de40596e07e937f6d5639"
   integrity sha512-0CIw0pFC1b81hUr6wP/oC74Sy6aoq0A6kO7Kf2S0DqD0+tquZQmWvmekV/vtETS6W8Iz42rfp1O5KTuNvpEFuA==
+
   dependencies:
     "@babel/core" "^7.12.10"
     "@babel/preset-env" "^7.12.11"
-    "@storybook/codemod" "6.2.1"
-    "@storybook/node-logger" "6.2.1"
+    "@storybook/codemod" "6.2.2"
+    "@storybook/node-logger" "6.2.2"
     "@storybook/semver" "^7.3.2"
     chalk "^4.1.0"
     commander "^6.2.1"
@@ -2388,6 +2396,22 @@
     ts-dedent "^2.0.0"
     util-deprecate "^1.0.2"
 
+
+"@storybook/client-logger@6.2.1":
+  version "6.2.1"
+  resolved "https://registry.yarnpkg.com/@storybook/client-logger/-/client-logger-6.2.1.tgz#6fb8b39309cdaf6fd431bfe0fe11e4454afc910e"
+  integrity sha512-VDdSaM9MRiiFQF545GFgNJNb6hMC+JHjiV0cfJ3adrs021JE/J3d6Nc8Kn/XcpcX2cFrQsbffrOGaCAWAIllNg==
+  dependencies:
+    core-js "^3.8.2"
+    global "^4.4.0"
+
+
+"@storybook/codemod@6.2.2":
+  version "6.2.2"
+  resolved "https://registry.yarnpkg.com/@storybook/codemod/-/codemod-6.2.2.tgz#75427e89b632e654848f0b81db6f007357a2f6ce"
+  integrity sha512-k4OGB+in1981MWWpBu+E9biXQB3knNeNTWyILKEbQVqqvVXPYjbdoe0j8UwcWAQYuPFlZGAgNJsduOSMgkGv7w==
+
+
 "@storybook/client-logger@6.2.2":
   version "6.2.2"
   resolved "https://registry.yarnpkg.com/@storybook/client-logger/-/client-logger-6.2.2.tgz#953cc977dd428e484db7e1f09f46505fa6567155"
@@ -2395,6 +2419,7 @@
   dependencies:
     core-js "^3.8.2"
     global "^4.4.0"
+
 
 "@storybook/client-logger@6.2.3":
   version "6.2.3"
@@ -2408,10 +2433,11 @@
   version "6.2.1"
   resolved "https://registry.yarnpkg.com/@storybook/codemod/-/codemod-6.2.1.tgz#a39184d19f791b3ba30290c722319ffd6e84e11c"
   integrity sha512-eQb12ewoqqXAmueydme7yfH0ZNg4oa1i4PtvWYK5xTXOexsrAgtijYc1hVUAdwKOM988X6DPg4uBE7GXDeesNw==
+
   dependencies:
     "@mdx-js/mdx" "^1.6.22"
     "@storybook/csf" "0.0.1"
-    "@storybook/node-logger" "6.2.1"
+    "@storybook/node-logger" "6.2.2"
     core-js "^3.8.2"
     cross-spawn "^7.0.3"
     globby "^11.0.2"
@@ -7917,10 +7943,10 @@ header-case@^2.0.4:
     capital-case "^1.0.4"
     tslib "^2.0.3"
 
-highlight.js@*, highlight.js@^10.1.1, highlight.js@^10.7.1, highlight.js@~10.7.0:
-  version "10.7.1"
-  resolved "https://registry.yarnpkg.com/highlight.js/-/highlight.js-10.7.1.tgz#a8ec4152db24ea630c90927d6cae2a45f8ecb955"
-  integrity sha512-S6G97tHGqJ/U8DsXcEdnACbirtbx58Bx9CzIVeYli8OuswCfYI/LsXH2EiGcoGio1KAC3x4mmUwulOllJ2ZyRA==
+highlight.js@*, highlight.js@^10.1.1, highlight.js@^10.7.2, highlight.js@~10.7.0:
+  version "10.7.2"
+  resolved "https://registry.yarnpkg.com/highlight.js/-/highlight.js-10.7.2.tgz#89319b861edc66c48854ed1e6da21ea89f847360"
+  integrity sha512-oFLl873u4usRM9K63j4ME9u3etNF0PLiJhSQ8rdfuL51Wn3zkD6drf9ZW0dOzjnZI22YYG24z30JcmfCZjMgYg==
 
 hmac-drbg@^1.0.1:
   version "1.0.1"
@@ -10068,17 +10094,17 @@ next-pwa@^5.0.6:
     workbox-webpack-plugin "^6.1.1"
     workbox-window "^6.1.1"
 
-next@10.1.2:
-  version "10.1.2"
-  resolved "https://registry.yarnpkg.com/next/-/next-10.1.2.tgz#2c508cc2982077f0bad6863be020c10c1d059970"
-  integrity sha512-S2KYS8NXeFmaJd8EyoC/kWi3uIlNz3PghnpDWYwy5dxhbtyaozK7fVpXmDcOTQEyYq3BZG5ph0B+hOsAwMdYfQ==
+next@10.1.3:
+  version "10.1.3"
+  resolved "https://registry.yarnpkg.com/next/-/next-10.1.3.tgz#e26e8371343a42bc2ba9be5cb253a7d324d03673"
+  integrity sha512-8Jf38F+s0YcXXkJGF5iUxOqSmbHrey0fX5Epc43L0uwDKmN2jK9vhc2ihCwXC1pmu8d2m/8wfTiXRJKGti55yw==
   dependencies:
     "@babel/runtime" "7.12.5"
     "@hapi/accept" "5.0.1"
-    "@next/env" "10.1.2"
-    "@next/polyfill-module" "10.1.2"
-    "@next/react-dev-overlay" "10.1.2"
-    "@next/react-refresh-utils" "10.1.2"
+    "@next/env" "10.1.3"
+    "@next/polyfill-module" "10.1.3"
+    "@next/react-dev-overlay" "10.1.3"
+    "@next/react-refresh-utils" "10.1.3"
     "@opentelemetry/api" "0.14.0"
     assert "2.0.0"
     ast-types "0.13.2"
@@ -12185,12 +12211,12 @@ sane@^4.0.3:
     minimist "^1.1.1"
     walker "~1.0.5"
 
-sb@^6.2.1:
-  version "6.2.1"
-  resolved "https://registry.yarnpkg.com/sb/-/sb-6.2.1.tgz#8c660cd1306bc16da0894c2b07dabe712dd5ceb9"
-  integrity sha512-lCPCzYw+N2XrmnedeBlZQ3IaXHrYNKTx4YWxi6Da0uWofVWaw07D/Nd/BdV6uxRFPeEZA0Jr3cC0SPqn9m6TEw==
+sb@^6.2.2:
+  version "6.2.2"
+  resolved "https://registry.yarnpkg.com/sb/-/sb-6.2.2.tgz#382b2f77c8841c50c0f1608b1f86383874fc6983"
+  integrity sha512-DAayLk4HLbQr8+FeC8FWxB7UBafO8u8PJqBlVU4CJY5wzANsNbXPNrIXH63bFb/GpfiulhaVqzZ0RQ31nuGSOA==
   dependencies:
-    "@storybook/cli" "6.2.1"
+    "@storybook/cli" "6.2.2"
 
 scheduler@^0.20.2:
   version "0.20.2"
