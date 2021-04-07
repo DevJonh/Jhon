@@ -42,7 +42,7 @@
     "@graphql-codegen/typescript": "^1.21.1",
     "@graphql-codegen/typescript-operations": "^1.17.15",
 
-    "@storybook/addon-essentials": "^6.2.3",
+    "@storybook/addon-essentials": "^6.2.5",
     "@storybook/react": "^6.2.2",
 
     "@testing-library/jest-dom": "^5.11.10",
