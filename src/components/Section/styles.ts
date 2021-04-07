@@ -40,6 +40,7 @@ export const Content = styled.section`
   flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 3.5rem;
+width:100%;
 
   @media (max-width: 768px) {
     flex-direction: column;
