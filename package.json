@@ -29,7 +29,7 @@
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-icons": "^4.2.0",
-    "sb": "^6.2.2",
+    "sb": "^6.2.4",
     "sharp": "^0.28.0",
     "styled-components": "^5.2.3",
     "webpack": "5.30.0"
