@@ -57,8 +57,7 @@
     semver "^5.4.1"
     source-map "^0.5.0"
 
-"@babel/core@^7.0.0", "@babel/core@^7.1.0", "@babel/core@^7.1.6", "@babel/core@^7.11.1", "@babel/core@^7.12.1", "@babel/core@^7.12.3", "@babel/core@^7.13.14", "@babel/core@^7.7.5":
-
+"@babel/core@^7.0.0", "@babel/core@^7.1.0", "@babel/core@^7.1.6", "@babel/core@^7.11.1", "@babel/core@^7.12.10", "@babel/core@^7.13.14", "@babel/core@^7.7.5":
   version "7.13.14"
   resolved "https://registry.yarnpkg.com/@babel/core/-/core-7.13.14.tgz#8e46ebbaca460a63497c797e574038ab04ae6d06"
   integrity sha512-wZso/vyF4ki0l0znlgM4inxbdrUvCb+cVz8grxDq+6C9k6qbqoIJteQOKicaKjCipU3ISV+XedCqpL2RJJVehA==
@@ -1082,9 +1081,7 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-
-"@babel/types@^7.0.0", "@babel/types@^7.12.1", "@babel/types@^7.12.10", "@babel/types@^7.12.13", "@babel/types@^7.12.7", "@babel/types@^7.13.0", "@babel/types@^7.13.12", "@babel/types@^7.13.13", "@babel/types@^7.13.14", "@babel/types@^7.4.4":
-
+"@babel/types@^7.0.0", "@babel/types@^7.12.1", "@babel/types@^7.12.13", "@babel/types@^7.12.7", "@babel/types@^7.13.0", "@babel/types@^7.13.12", "@babel/types@^7.13.13", "@babel/types@^7.13.14", "@babel/types@^7.4.4":
   version "7.13.14"
   resolved "https://registry.yarnpkg.com/@babel/types/-/types-7.13.14.tgz#c35a4abb15c7cd45a2746d78ab328e362cbace0d"
   integrity sha512-A2aa3QTkWoyqsZZFl56MLUsfmh7O0gN41IPvXAE/++8ojpbz12SszD7JEGYVdn4f9Kt4amIei07swF1h4AqmmQ==
@@ -9649,10 +9646,10 @@ nested-error-stacks@^2.0.0, nested-error-stacks@^2.1.0:
   resolved "https://registry.yarnpkg.com/nested-error-stacks/-/nested-error-stacks-2.1.0.tgz#0fbdcf3e13fe4994781280524f8b96b0cdff9c61"
   integrity sha512-AO81vsIO1k1sM4Zrd6Hu7regmJN1NSiAja10gc4bX3F0wd+9rQmcuHQaHVQCYIEC8iFXnE+mavh23GOt7wBgug==
 
-next-pwa@^5.2.1:
-  version "5.2.1"
-  resolved "https://registry.yarnpkg.com/next-pwa/-/next-pwa-5.2.1.tgz#c29c70cd79e40fc464fbed59ed5444cd899a12f1"
-  integrity sha512-aLDHX62hd6nT0kBqkrOmfPFJ4uDJ8FKbmuf+xbHuJwnYLRa9N3NNoiy3qMYYohpmHbAc/XJd7p+ZQQvGXPNjYw==
+next-pwa@^5.2.3:
+  version "5.2.3"
+  resolved "https://registry.yarnpkg.com/next-pwa/-/next-pwa-5.2.3.tgz#ec3b61eb4689859252357e33a1495abaeee09fe9"
+  integrity sha512-CVht4cT3KxOe9Yc/kyJleJY5653646D4j3rxpsqVHoH71cDEDu0pOfHr9FPp9IBpTHFSS3ZTXO7+uyxtbABycg==
   dependencies:
     babel-loader "^8.2.2"
     clean-webpack-plugin "^3.0.0"
