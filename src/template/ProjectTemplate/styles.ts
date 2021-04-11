@@ -154,7 +154,8 @@ export const Descricao = styled.section`
     }
   }
 
-  h2 {
+  h2,
+  h1 {
     margin-bottom: 0.2rem;
   }
 
@@ -175,9 +176,21 @@ export const Descricao = styled.section`
     justify-content: center;
     width: 60%;
     margin: 0 auto;
+    p {
+      line-height: 1.2;
+      a {
+        & + a {
+          margin-left: 1rem;
+        }
+      }
+    }
 
     a {
       & + a {
+        margin-left: 1rem;
+      }
+
+      & + p {
         margin-left: 1rem;
       }
     }
