@@ -32,7 +32,7 @@
     "sb": "^6.2.7",
     "sharp": "^0.28.0",
     "styled-components": "^5.2.3",
-    "webpack": "5.31.2"
+    "webpack": "5.32.0"
   },
   "devDependencies": {
     "@babel/core": "^7.13.15",
