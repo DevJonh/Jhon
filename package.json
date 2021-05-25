@@ -23,7 +23,7 @@
     "graphql": "^15.5.0",
     "graphql-request": "^3.4.0",
     "marked-ts": "^1.0.0-beta.5",
-    "next": "10.2.2",
+    "next": "10.2.3",
     "next-pwa": "^5.2.21",
     "nextjs-progressbar": "^0.0.9",
     "react": "17.0.2",
