@@ -58,6 +58,7 @@ export const getStaticProps: GetStaticProps = async () => {
   const { technicalAbilitie } = await client.request<GetAbilitiesQuery>(
     GET_ABILITIES
   )
+
   const { formations } = await client.request<GetFormationQuery>(GET_FORMATIONS)
   const { certifications } = await client.request<GetCertificateQuery>(
     GET_CERTIFICATES
