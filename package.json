@@ -37,7 +37,7 @@
     "@babel/core": "^7.14.3",
     "@babel/preset-typescript": "^7.13.0",
     "@graphql-codegen/add": "^2.0.2",
-    "@graphql-codegen/cli": "1.21.4",
+    "@graphql-codegen/cli": "2.3.0",
     "@graphql-codegen/typescript": "^1.22.0",
     "@graphql-codegen/typescript-operations": "^1.17.16",
     "@testing-library/jest-dom": "^5.12.0",
@@ -63,7 +63,7 @@
     "husky": "^6.0.0",
     "lint-staged": "^11.0.0",
     "plop": "^2.7.4",
-    "prettier":"^2.5.0"
+    "prettier": "^2.5.0",
     "typescript": "^4.2.4"
   }
 }
