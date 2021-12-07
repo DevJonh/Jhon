@@ -24,7 +24,7 @@
     "markdown-to-jsx": "^7.1.5",
     "marked-ts": "^1.0.0-beta.5",
     "next": "10.2.3",
-    "next-pwa": "^5.2.21",
+    "next-pwa": "^5.4.4",
     "nextjs-progressbar": "^0.0.13",
     "react": "17.0.2",
     "react-dom": "17.0.2",
@@ -40,7 +40,7 @@
     "@graphql-codegen/cli": "2.3.0",
     "@graphql-codegen/typescript": "^2.4.1",
     "@graphql-codegen/typescript-operations": "^1.17.16",
-    "@testing-library/jest-dom": "^5.12.0",
+    "@testing-library/jest-dom": "^5.16.0",
     "@testing-library/react": "^11.2.7",
     "@types/highlight.js": "^10.1.0",
     "@types/jest": "^27.0.3",
@@ -62,8 +62,8 @@
     "highlight.js": "^11.3.1",
     "husky": "^6.0.0",
     "lint-staged": "^11.0.0",
-    "plop": "^3.0.1",
     "prettier": "^2.5.1",
+    "plop": "^3.0.2",
     "typescript": "^4.2.4"
   }
 }
