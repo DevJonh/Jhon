@@ -34,8 +34,8 @@
     "webpack": "5.65.0"
   },
   "devDependencies": {
+    "@babel/preset-typescript": "^7.16.5",
     "@babel/core": "^7.16.5",
-    "@babel/preset-typescript": "^7.13.0",
     "@graphql-codegen/add": "^2.0.2",
     "@graphql-codegen/cli": "2.3.0",
     "@graphql-codegen/typescript": "^2.4.1",
